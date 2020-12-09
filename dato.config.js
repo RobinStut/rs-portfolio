@@ -6,6 +6,12 @@ module.exports = (dato, root, i18n) => {
       case 'author':
         value = markdown.toHTML(value)
         break;
+      case 'education':
+        value = markdown.toHTML(value)
+        break;
+      case 'experience':
+        value = markdown.toHTML(value)
+        break;
       case 'image':
         value = value.upload.url
         break;
