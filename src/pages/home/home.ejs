@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title><%- data.headDetail.title %></title>
+    <% include ../../components/seo/seo %>
+
+  </head>
+  <body class="home" id="home">
+     <!--  -->
+    <nav class="navigation">
+      <a href="#home" class="navigation-logo">Robin Stut</a>
+      <a href="#home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#bio">Bio</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <!--  -->
+    <section class="hero">
+      <div class="hero-wrapper">
+        <span class="hero-greeting"><%- data.hero.greeting %></span>
+        <h1 class="hero-author"><%- data.hero.author %></h1>
+        <p class="hero-foreword"><%- data.hero.foreword %></p>
+      </div>
+      <% include ../../components/canvas/canvas %>
+    </section>
+    <!--  -->
+    <section class="skills" id="skills">
+      <h2>What I do</h2>
+      <div class="skill-wrapper parent">
+        <% data.skills.forEach(function(skill){ %>
+        <section class="skill child">
+          <picture class="fixed-ratio fixed-ratio-1by1">
+            <!-- multiple <source>s here -->
+            <img alt="" src="<%- skill.image %>" class="fixed-ratio-content" />
+          </picture>
+
+          <strong><%- skill.title %></strong>
+          <p><%- skill.content %></p>
+        </section>
+        <% }); %>
+      </div>
+    </section>
+    <!--  -->
+    <section class="bio parent" id="bio">
+      <div class="bio-wrapper child">
+        <h2><%- data.bio.title %></h2>
+        <p><%- data.bio.aboutMe %></p>
+        <a href="#contact">Contact me</a>
+      </div>
+      <div class="bio-wrapper child">
+        <picture class="fixed-ratio fixed-ratio-1by1">
+          <!-- multiple <source>s here -->
+          <img alt="" src="<%- data.bio.image %>" class="fixed-ratio-content" />
+        </picture>
+      </div>
+    </section>
+    <!--  -->
+    <section class="resume parent" id="resume">
+      <div class="resume-wrapper child">
+        <h2><%- data.resume.educationtitle %></h2>
+        <section class="resume-list"><%- data.resume.education %></section>
+      </div>
+      <div class="resume-wrapper child">
+        <h2><%- data.resume.experiencetitle %></h2>
+        <section class="resume-list"><%- data.resume.experience %></section>
+      </div>
+    </section>
+    <!--  -->
+    <section class="contact parent" id="contact">
+      <h2>Get in contact</h2>
+      <div class="contact-links child">
+        <label>
+          Phone
+          <a href="tel:+31648811989">
+            +31 6 48 81 19 89
+          </a>
+        </label>
+        <label>
+          Email
+          <a href="mailto:info@robinstut.nl">
+            info@robinstut.nl
+          </a>
+        </label>
+        <label>
+          LinkedIn
+          <a href="https://www.linkedin.com/in/robin-stut-173779b7/">
+            Robin Stut
+          </a>
+        </label>
+        <label>
+          GitHub
+          <a href="https://github.com/RobinStut">RobinStut</a>
+        </label>
+      </div>
+      <div class="contact-form child">
+      <h3>Message me on WhatsApp!</h3>
+      <label>
+        Name
+      <input type="text" contact-name />
+      </label>
+      <label>
+        Your message
+      <textarea cols="30" rows="3" contact-message></textarea>
+      </label>
+      <button contact-button
+        >Send now</a
+      >
+      </div>
+    </section>
+  </body>
+</html>
