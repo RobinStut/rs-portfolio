@@ -6,7 +6,7 @@
   "scripts": {
     "predata": "rimraf ./.dato",
     "data": "dato dump; node dato.config.js; npm run build",
-    "prebuild": "rimraf ./dist",
+    "prebuild": "rimraf ./dist; npm run data",
     "build": "webpack -d",
     "watch": "npm-run-all --parallel watch:*",
     "watch:html": "chokidar './src/**/*.+(html|ejs)' -c 'npm run build'",
