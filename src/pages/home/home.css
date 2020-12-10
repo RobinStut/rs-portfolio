@@ -141,6 +141,7 @@ body {
 .contact .contact-form label {
   display: flex;
   flex-flow: column;
+  margin-bottom: 0.5rem;
 }
 
 .contact .contact-form textarea,
