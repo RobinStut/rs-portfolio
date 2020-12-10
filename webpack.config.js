@@ -10,7 +10,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name]/script.js'
+    filename: 'index.js'
   },
   optimization: {
     splitChunks: {
@@ -71,7 +71,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: './home/index.html',
+      filename: 'index.html',
       template: '!!ejs-webpack-loader!src/pages/home/home.ejs',
       templateParameters: {
         'data': require('./.dato/data.json'),
