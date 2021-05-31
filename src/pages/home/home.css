@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+}
+
+.home {
+  background-color: #faf9fc;
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+
+.home .hero {
+  color: #fff;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.home .hero .hero-wrapper {
+  max-width: 56.25rem;
+  margin: 0 auto;
+  padding: 10vw;
+}
+
+.home .hero .hero-greeting,
+.home .hero .hero-author,
+.home .hero .hero-foreword {
+  margin-bottom: 2rem;
+}
+
+.home .hero .hero-author {
+  font-size: 2rem;
+}
+
+.skills h2 {
+  text-align: center;
+}
+
+.skills .skill {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 300px; */
+  padding: 0.5rem;
+}
+
+.skills .skill p {
+  text-align: center;
+}
+
+.skills .skill .fixed-ratio-content {
+  width: 100%;
+  height: 100%;
+  max-width: inherit;
+}
+
+.skills .skill .fixed-ratio-1by1 {
+  max-height: 12.5rem;
+  max-width: 12.5rem;
+  margin-bottom: 1rem;
+}
+
+.home .bio .fixed-ratio {
+  margin-top: 1rem;
+}
+
+.home .bio .fixed-ratio img {
+  width: 400px;
+}
+
+.home a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  background-color: #2a3950;
+  color: white;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.home a:hover {
+  background-color: #355c7d;
+}
+
+.resume .resume-list p {
+  display: flex;
+  flex-flow: column;
+}
+
+.home .parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 10vw;
+}
+
+.home .child {
+  flex: 1 1 400px;
+}
+
+.home .contact {
+  background-color: black;
+  color: white;
+  padding-bottom: 10vw;
+}
+
+.home .contact .contact-links {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+
+.contact-links label {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+  margin-bottom: 0.5rem;
+}
+
+.home .contact h2 {
+  flex: 100%;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.contact .contact-form {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+
+.contact .contact-form h3 {
+  margin: 0;
+}
+
+.contact .contact-form label {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 0.5rem;
+}
+
+.contact .contact-form textarea,
+.contact .contact-form input {
+  padding: 0.5rem;
+  color: #fff;
+  margin-top: 4px;
+  background-color: #000;
+  border: none;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+.contact .contact-form textarea {
+  resize: vertical;
+}
+
+.contact .contact-form button {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  background-color: #2a3950;
+  color: white;
+  border-radius: 4px;
+  border: none;
+}
+
+.navigation {
+  width: 100vw;
+  position: fixed;
+  background-color: #000;
+  /* height: 75px; */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.home .navigation a {
+  text-decoration: none;
+  background-color: black;
+  align-self: center;
+  line-height: 20px;
+  transition: 0.2s;
+  padding: 0.5rem;
+}
+
+.home .navigation a:hover {
+  text-decoration: underline;
+}
+
+.home .navigation .navigation-logo {
+  margin-right: auto;
+  flex: 1 1 100%;
+}
+
+@media only screen and (min-width: 630px) {
+  .home .navigation a {
+    padding: 0.5rem 1.5rem;
+    line-height: 50px;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  .home .navigation .navigation-logo {
+    flex: unset;
+  }
+}
